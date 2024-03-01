@@ -3,3 +3,66 @@
     height: 500px;
 }
 
+.my-table{
+    border: 1px solid #333;
+}
+
+#content{
+    display: flex;
+    flex-direction: row;
+    .wrapper-div{
+        width: 200px;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #333;
+        .div-1{
+            width: 100%;
+            height: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 1px solid #333;
+            .div-1-name{
+                
+            }
+        }
+        .div-2{
+            width: 100%;
+            height: 60%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .div-2-image{
+                width: 100px;
+                aspect-ratio: 1/1;
+                background-color: bisque;
+            }
+        }
+        .div-3{
+            width: 100%;
+            height: 20%;
+            display: flex;
+            flex-direction: row;
+            border-top: 1px solid #333;
+            .div-3-1{
+                width: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .div-3-1-age{
+
+                }
+            }
+            .div-3-2{
+                width: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .div-3-2-piece{
+
+                }
+            }
+        }
+    }
+}

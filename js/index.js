@@ -129,8 +129,73 @@ animal.forEach(function(value){
 
 var table = document.createElement("table");
 
+const myStyle = document.createAttribute('class');
+myStyle.value = "my-table";
+table.setAttributeNode(myStyle)
+
 table.appendChild(thead);
 
 table.appendChild(tbody);
 
 document.getElementById("wrapper").appendChild(table);
+
+
+
+/*
+<div class="wrapper-div">
+  <div class="div-1">
+    <div class="div-1-name">
+    
+    </div>
+  </div>
+  <div class="div-2">
+    <div class="div-2-image"></div>
+  </div>
+  <div class="div-3">
+    <div class="div-3-1">
+      <div class="div-3-1-age"></div>
+    </div>
+    <div class="div-3-2">
+      <div class="div-3-2-piece"></div>
+    </div>
+  </div>
+</div>
+*/
+
+//Tao ra 1 card chua ten, giong loai, tuoi
+
+animal.forEach((value)=>{
+  let wrapperDiv = document.createElement("div");
+  wrapperDiv.setAttribute("class","wrapper-div")
+  let div1 = document.createElement("div");
+  div1.setAttribute("class","div-1");
+  let div1Name = document.createElement("div");
+  div1Name.setAttribute("class", "div-1-name");
+  div1Name.textContent = value.name;
+  div1.appendChild(div1Name);
+  wrapperDiv.appendChild(div1);
+  let div2 = document.createElement("div");
+  div2.setAttribute("class", "div-2");
+  let div2Image = document.createElement("div");
+  div2Image.setAttribute("class", "div-2-image");
+  div2.appendChild(div2Image);
+  let div3 = document.createElement("div");
+  div3.setAttribute("class", "div-3");
+  let div31 = document.createElement("div");
+  div31.setAttribute("class", "div-3-1");
+  let div31Age = document.createElement("div"); 
+  div31Age.textContent = value.age;
+  div31.appendChild(div31Age);
+  let div32 = document.createElement("div");
+  div32.setAttribute("class", "div-3-2");
+  let div32Piece = document.createElement("div"); 
+  div32Piece.textContent = value.piece;
+  div32.appendChild(div32Piece);
+  div3.appendChild(div31);
+  div3.appendChild(div32);
+  wrapperDiv.appendChild(div2);
+  wrapperDiv.appendChild(div3);
+  document.getElementById("content").appendChild(wrapperDiv);
+})
+
+
