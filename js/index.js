@@ -134,5 +134,3 @@ table.appendChild(thead);
 table.appendChild(tbody);
 
 document.getElementById("wrapper").appendChild(table);
-
-//klkj
